@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 function FoodItem(props) {
-  let [text, setText] = useState("read more");
+  const [text, setText] = useState("read more");
 
   const read = (event) => {
     const desc = event.currentTarget.previousElementSibling;
     desc.classList.toggle("expanded");
     const parent = event.currentTarget.parentElement.parentElement;
     parent.classList.toggle("extended");
-    console.log(parent);
-    
 
-    text == "read more" ? setText("read less") : setText("read more");
+    // Toggle the button text
+    const toggleText = text === "read more" ? "read less" : "read more";
+    setText(toggleText);
   };
 
   return (
