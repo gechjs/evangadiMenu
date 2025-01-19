@@ -33,12 +33,19 @@ function FoodItem(props) {
   );
 }
 
-
 FoodItem.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+};
+
+
+FoodItem.defaultProps = {
+  img: "https://via.placeholder.com/150",
+  title: "Default Food Title",
+  price: "$0.00",
+  desc: "No description available.",
 };
 
 export default FoodItem;
