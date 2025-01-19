@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 function FoodItem(props) {
   const [text, setText] = useState("read more");
@@ -9,7 +10,6 @@ function FoodItem(props) {
     const parent = event.currentTarget.parentElement.parentElement;
     parent.classList.toggle("extended");
 
-    // Toggle the button text
     const toggleText = text === "read more" ? "read less" : "read more";
     setText(toggleText);
   };
@@ -32,5 +32,13 @@ function FoodItem(props) {
     </div>
   );
 }
+
+
+FoodItem.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+};
 
 export default FoodItem;
