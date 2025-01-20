@@ -2,7 +2,7 @@ import "./App.css";
 import "./commonResource/data";
 import FoodItem from "./Components/FoodItem";
 
-
+// Added another food item to the Menu array
 const Menu = [
   {
     id: 1,
@@ -31,6 +31,13 @@ const Menu = [
     desc: "Crispy golden french fries",
     title: "French Fries",
     img: "french-fries.jpg",
+  },
+  {
+    id: 5, // New item
+    price: "$7",
+    desc: "Fresh and healthy Caesar salad",
+    title: "Caesar Salad",
+    img: "caesar-salad.jpg",
   },
 ];
 
