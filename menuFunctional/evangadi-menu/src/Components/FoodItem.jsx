@@ -25,7 +25,11 @@ function FoodItem(props) {
       </div>
       <div className="food-desc-container">
         <p className="food-desc">{props.desc}</p>
-        <button onClick={read} className="read-more-btn">
+        <button
+          onClick={read}
+          className="read-more-btn"
+          aria-expanded={text === "read less"}
+        >
           {text}
         </button>
       </div>
@@ -39,7 +43,6 @@ FoodItem.propTypes = {
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
 };
-
 
 FoodItem.defaultProps = {
   img: "https://via.placeholder.com/150",

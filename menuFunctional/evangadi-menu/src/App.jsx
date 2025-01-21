@@ -33,7 +33,7 @@ const Menu = [
     img: "french-fries.jpg",
   },
   {
-    id: 5, // New item
+    id: 5,
     price: "$7",
     desc: "Fresh and healthy Caesar salad",
     title: "Caesar Salad",
