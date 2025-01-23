@@ -22,8 +22,12 @@ function FoodItem(props) {
     alert(`You selected: ${props.title}`);
   };
 
+  const handleMouseEnter = () => {
+    console.log(`Hovering over: ${props.title}`);
+  };
+
   return (
-    <div className="single-food">
+    <div className="single-food" onMouseEnter={handleMouseEnter}>
       <div className="img">
         <img 
           src={props.img} 
