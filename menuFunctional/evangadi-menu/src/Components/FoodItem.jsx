@@ -18,6 +18,10 @@ function FoodItem(props) {
     console.log(`Food item clicked: ${props.title}`);
   };
 
+  const handleButtonClick = () => {
+    alert(`You selected: ${props.title}`);
+  };
+
   return (
     <div className="single-food">
       <div className="img">
@@ -39,6 +43,12 @@ function FoodItem(props) {
           aria-expanded={text === "read less"}
         >
           {text}
+        </button>
+        <button
+          onClick={handleButtonClick}
+          className="select-food-btn"
+        >
+          Select
         </button>
       </div>
     </div>
