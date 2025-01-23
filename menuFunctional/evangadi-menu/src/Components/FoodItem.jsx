@@ -14,10 +14,18 @@ function FoodItem(props) {
     setText(toggleText);
   };
 
+  const handleImageClick = () => {
+    console.log(`Food item clicked: ${props.title}`);
+  };
+
   return (
     <div className="single-food">
       <div className="img">
-        <img src={props.img} alt={props.title} />
+        <img 
+          src={props.img} 
+          alt={props.title} 
+          onClick={handleImageClick} 
+        />
       </div>
       <div className="title-price">
         <h3>{props.title}</h3>
