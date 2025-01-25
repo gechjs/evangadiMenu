@@ -49,12 +49,14 @@ function FoodItem(props) {
           onClick={read}
           className="read-more-btn"
           aria-expanded={text === "read less"}
+          aria-label={text === "read less" ? "Read less about this food item" : "Read more about this food item"}
         >
           {text}
         </button>
         <button
           onClick={handleButtonClick}
           className="select-food-btn"
+          aria-label={`Select ${props.title}`}
         >
           Select
         </button>
