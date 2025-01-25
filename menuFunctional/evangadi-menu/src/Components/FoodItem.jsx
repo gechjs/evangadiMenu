@@ -19,7 +19,11 @@ function FoodItem(props) {
   };
 
   const handleButtonClick = () => {
-    alert(`You selected: ${props.title}`);
+    if (props.onAddToCart) {
+      props.onAddToCart(props.title);
+    } else {
+      alert(`You selected: ${props.title}`);
+    }
   };
 
   const handleMouseEnter = () => {
@@ -64,6 +68,7 @@ FoodItem.propTypes = {
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  onAddToCart: PropTypes.func,
 };
 
 FoodItem.defaultProps = {
@@ -71,6 +76,7 @@ FoodItem.defaultProps = {
   title: "Default Food Title",
   price: "$0.00",
   desc: "No description available.",
+  onAddToCart: null,
 };
 
 export default FoodItem;
