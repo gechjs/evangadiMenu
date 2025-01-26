@@ -2,7 +2,6 @@ import "./App.css";
 import "./commonResource/data";
 import FoodItem from "./Components/FoodItem";
 
-// Added another food item to the Menu array
 const Menu = [
   {
     id: 1,
@@ -59,6 +58,9 @@ function App() {
           />
         ))}
       </div>
+      <footer className="footer">
+        <p>Contact us: info@evangadi.com | Follow us on social media!</p>
+      </footer>
     </div>
   );
 }
